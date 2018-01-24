@@ -5,24 +5,24 @@ import java.util.Scanner;
 public class Booleans {
 
     private static boolean isEven (int number) {
-        boolean isEven = (number % 2 == 0);
-
-            return isEven;
+            return (number % 2 == 0);
     }
 
     public static void main(String args[]) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter a number or type 'exit' to terminate the system");
         while (scanner.hasNextInt()){
-            int eventest = scanner.nextInt();
-            if(isEven(eventest)){
-            System.out.println("This number is even");
-            } else {
-            System.out.println("This number is odd");
-            }
+
+            int evenTest = scanner.nextInt();
+
+            String result = isEven(evenTest) ? "even" : "odd";
+
+            System.out.println("This number is " + result);
+
             if (scanner.hasNext("exit")){
                 System.exit(0);
             }
+
         }
     }
 }
