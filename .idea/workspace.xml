@@ -27,8 +27,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+            <state relative-caret-position="300">
+              <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -115,6 +115,11 @@
             <path>
               <item name="JavaExercises" type="b2602c69:ProjectViewProjectNode" />
               <item name="JavaExercises" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JavaExercises" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JavaExercises" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="JavaExercises" type="b2602c69:ProjectViewProjectNode" />
@@ -393,12 +398,12 @@
       <workItem from="1516749702076" duration="132000" />
       <workItem from="1516749870979" duration="21643000" />
       <workItem from="1516916921649" duration="756000" />
-      <workItem from="1516917720859" duration="4715000" />
+      <workItem from="1516917720859" duration="4756000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35425000" />
+    <option name="totallyTimeSpent" value="35466000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="840" height="1027" extended-state="0" />
@@ -693,8 +698,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+        <state relative-caret-position="300">
+          <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
           <folding />
         </state>
       </provider>
