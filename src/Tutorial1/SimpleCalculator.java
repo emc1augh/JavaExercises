@@ -56,7 +56,6 @@ public class SimpleCalculator {
             System.out.println("You have chosen " + chosen + ". Please enter a number.");
         } else {
             System.out.println("You have chosen " + chosen + ". Please enter two numbers to " + chosen + " separated by a space");
-
         }
 
         Scanner numbers = new Scanner(System.in);
