@@ -2,19 +2,19 @@ package Tutorial4;
 
 public class Currency {
 
-    String name;
-    Double rate;
+    private String name;
+    private Double rate;
 
     Currency(String name, Double rate){
         this.name = name;
         this.rate = rate;
     }
 
-    public String getName() {
+    String getName() {
         return name;
     }
 
-    public Double getRate() {
+    Double getRate() {
         return rate;
     }
 

@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.io.PrintWriter;
 import java.io.Writer;
 import java.util.ArrayList;
 
@@ -11,18 +12,15 @@ public class CurrencyConverter {
 
     private JFrame frame;
     private JTextField textField;
-    String amount;
-    Currency currencyFrom;
-    Currency currencyTo;
+    private String amount;
+    private Currency currencyFrom;
+    private Currency currencyTo;
 
-    Currency GBP = new Currency("GBP", 1.0);
-    Currency USD = new Currency("USD", 1.32);
-    Currency YEN = new Currency("YEN", 148.91);
-    Currency EU = new Currency("EU", 1.12);
+    private Currency GBP = new Currency("GBP", 1.0);
+    private Currency USD = new Currency("USD", 1.32);
+    private Currency YEN = new Currency("YEN", 148.91);
+    private Currency EU = new Currency("EU", 1.12);
 
-    /**
-     * Launch the application.
-     */
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -36,16 +34,10 @@ public class CurrencyConverter {
         });
     }
 
-    /**
-     * Create the application.
-     */
-    public CurrencyConverter() {
+    private CurrencyConverter() {
         initialize();
     }
 
-    /**
-     * Initialise the contents of the frame.
-     */
     private void initialize() {
         frame = new JFrame();
         frame.setBounds(100, 100, 450, 300);
@@ -70,13 +62,21 @@ public class CurrencyConverter {
         comboBox.setBounds(318, 83, 75, 27);
         frame.getContentPane().add(comboBox);
 
-        JLabel lblCurrencyConvertngTo = new JLabel("Currency converting to:");
-        lblCurrencyConvertngTo.setBounds(42, 139, 162, 26);
-        frame.getContentPane().add(lblCurrencyConvertngTo);
+        JLabel lblCurrencyConvertingTo = new JLabel("Currency converting to:");
+        lblCurrencyConvertingTo.setBounds(42, 139, 162, 26);
+        frame.getContentPane().add(lblCurrencyConvertingTo);
 
         JComboBox comboBox_1 = new JComboBox(returnCurrencyName(returnCurrencies(GBP, USD, YEN, EU)));
         comboBox_1.setBounds(216, 140, 75, 27);
         frame.getContentPane().add(comboBox_1);
+
+        JLabel lblFinalAmount = new JLabel("Amount of new currency:");
+        lblFinalAmount.setBounds(42, 191, 162, 26);
+        frame.getContentPane().add(lblFinalAmount);
+
+        JLabel lblFinalAmountNumber = new JLabel("0");
+        lblFinalAmountNumber.setBounds(216, 191, 162, 26);
+        frame.getContentPane().add(lblFinalAmountNumber);
 
         JButton btnConvert = new JButton("Convert");
         btnConvert.addMouseListener(new MouseAdapter() {
@@ -117,7 +117,7 @@ public class CurrencyConverter {
                 }
 
                 try {
-                    Writer.write(converter(currencyTo, currencyFrom, amount));
+                    lblFinalAmountNumber.setText(converter(currencyTo,currencyFrom,amount));
                 } catch (NumberFormatException e1) {
                     System.out.println("No user input");
                 } catch (Exception e1) {
@@ -125,7 +125,7 @@ public class CurrencyConverter {
                 }
             }
         });
-        btnConvert.setBounds(167, 214, 117, 29);
+        btnConvert.setBounds(167, 240, 117, 29);
         frame.getContentPane().add(btnConvert);
     }
 
@@ -151,9 +151,9 @@ public class CurrencyConverter {
         return result;
     }
 
-    private static Double converter(Currency currencyTo, Currency currencyFrom, String amount) {
+    private static String converter(Currency currencyTo, Currency currencyFrom, String amount) {
         Double GBP = Double.parseDouble(amount) / currencyFrom.getRate();
 
-        return GBP * currencyTo.getRate();
+        return String.valueOf(GBP * currencyTo.getRate());
     }
 }
