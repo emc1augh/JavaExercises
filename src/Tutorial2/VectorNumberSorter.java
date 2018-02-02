@@ -7,13 +7,13 @@ public class VectorNumberSorter {
 
     public static void main(String[] args) {
 
-        Vector<Double> vector = new Vector<>(50);
-        double num;
+        Vector<Integer> vector = new Vector<>(50);
+        int num;
         Scanner scanner = new Scanner(System.in);
 
         do {
             System.out.println("Please enter your numbers: ");
-            num = scanner.nextDouble();
+            num = scanner.nextInt();
 
             if (vector.size() == 0) {
                 vector.add(num);

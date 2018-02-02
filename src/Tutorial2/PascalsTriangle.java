@@ -16,7 +16,6 @@ public class PascalsTriangle {
 
         for(int i = 0; i < numRows; i++){
             int n = numRows-1;
-            String[] spaces = new String [(n-i)];
 
             for (int k = 0; k < (n - i); k ++) {
                 System.out.print("\t");
